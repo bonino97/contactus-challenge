@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactusComponent } from './contactus.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ContactusComponent } from './contactus.component';
+import { CheckboxModule } from 'primeng/checkbox';
 
 const routes = [
   {
@@ -12,6 +14,11 @@ const routes = [
 
 @NgModule({
   declarations: [ContactusComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FormsModule,
+    CheckboxModule,
+  ],
 })
 export class ContactusModule {}
