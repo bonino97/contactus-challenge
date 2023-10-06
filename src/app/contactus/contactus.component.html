@@ -38,8 +38,11 @@
 
     <div class="flex align-items-center justify-content-between mb-6">
       <div class="flex align-items-center">
-        <!-- Checkbox -->
-        <input id="rememberme1" type="checkbox" class="mr-2" pInputSwitch />
+        <p-checkbox
+          id="rememberme1"
+          [binary]="true"
+          styleClass="mr-2"
+        ></p-checkbox>
         <label for="rememberme1" class="text-900">Remember me</label>
       </div>
       <a
