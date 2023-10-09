@@ -1,6 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject, catchError, of, shareReplay, tap } from 'rxjs';
+import {
+  BehaviorSubject,
+  Observable,
+  Subject,
+  catchError,
+  of,
+  shareReplay,
+  tap,
+  throwError,
+} from 'rxjs';
 import { IUser } from '../interfaces/IUser.interface';
 import { IResponse } from '../interfaces/IResponse.interface';
 
@@ -9,7 +18,7 @@ import { IResponse } from '../interfaces/IResponse.interface';
 })
 export class UserService {
   private apiUrl = 'assets/mocks/users.json';
-  private usersSubject = new Subject<IUser[]>();
+  private usersSubject = new BehaviorSubject<IUser[]>([]);
 
   users$ = this.usersSubject.asObservable();
 
@@ -31,5 +40,18 @@ export class UserService {
 
   getUsers(): Observable<IResponse<IUser[]>> {
     return this.http.get<IResponse<IUser[]>>(this.apiUrl);
+  }
+
+  createUser(user: IUser): Observable<IResponse<IUser>> {
+    return this.http.post<IResponse<IUser>>(this.apiUrl, user).pipe(
+      tap((response) => {
+        const users = this.usersSubject.getValue();
+        users.push(response.data);
+        this.usersSubject.next(users);
+      }),
+      catchError(() => {
+        return throwError(() => 'Error creating user!');
+      })
+    );
   }
 }

@@ -7,7 +7,7 @@
       <div class="text-900 text-3xl font-bold mt-4">Contact Us</div>
     </div>
 
-    <form>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-column lg:flex-row gap-2 mb-4">
         <div class="mb-4 lg:mb-0 w-full lg:w-1/2">
           <label for="firstName" class="block text-900 font-medium mb-2"
@@ -19,6 +19,7 @@
             placeholder="James"
             pInputText
             class="w-full"
+            formControlName="firstName"
           />
         </div>
         <div class="w-full lg:w-1/2">
@@ -31,6 +32,7 @@
             placeholder="Appleseed"
             pInputText
             class="w-full"
+            formControlName="lastName"
           />
         </div>
       </div>
@@ -43,6 +45,7 @@
           placeholder="james.appleseed@company.com"
           pInputText
           class="w-full"
+          formControlName="email"
         />
       </div>
 
@@ -79,12 +82,18 @@
           placeholder="Leave us a message..."
           pInputText
           class="w-full"
+          formControlName="message"
         ></textarea>
       </div>
 
       <div class="flex align-items-center justify-content-between mb-6">
         <div class="flex align-items-center">
-          <p-checkbox id="terms" [binary]="true" styleClass="mr-2"></p-checkbox>
+          <p-checkbox
+            id="terms"
+            [binary]="true"
+            styleClass="mr-2"
+            formControlName="terms"
+          ></p-checkbox>
           <label for="terms" class="text-900"
             >I agree to Terms of Service and Privacy Policy</label
           >
