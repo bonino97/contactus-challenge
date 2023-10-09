@@ -14,7 +14,7 @@ Access the live demo of the project through the following link: [Contact Us Chal
 
 Upon submitting the contact form on the `/contact-us` route, a static (mocked) user will be created and displayed on the `/home` route.
 
-## Deployment
+## Deployment [IMPORTANT]
 
 Every push to the `main` branch triggers an automatic deployment to Netlify, ensuring that the [live demo](https://contact-us-challenge.netlify.app) always reflects the latest state of the project.
 
@@ -23,7 +23,7 @@ Every push to the `main` branch triggers an automatic deployment to Netlify, ens
 ### Prerequisites
 
 Ensure you have the following installed on your local development machine:
-- [Node.js](https://nodejs.org/) (version 14.0.0 or later)
+- [Node.js](https://nodejs.org/) (version 18.10.0 or later)
 - [Angular CLI](https://angular.io/cli)
 
 ### Installation Steps
@@ -41,26 +41,19 @@ Ensure you have the following installed on your local development machine:
    
 3. **Start the Development Server:**
     ```shell
-    ng serve
+    npm start
     ```
    Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Development Commands
 
-- **Generate Component:**
-    ```shell
-    ng generate component [component-name]
-    ```
-   Additional Angular scaffolding commands are available, such as generating services, directives, pipes, etc.
-  
 - **Build the Project:**
     ```shell
-    ng build
+    npm run build
     ```
    The build artifacts will be stored in the `dist/` directory.
 
 - **Run Unit Tests:**
     ```shell
-    ng test
+    npm run test
     ```
-   Execute unit tests via [Karma](https://karma-runner.github.io).
