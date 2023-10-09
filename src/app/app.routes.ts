@@ -16,8 +16,13 @@ export const routes: Routes = [
       import('./pricing/pricing.module').then((m) => m.PricingModule),
   },
   {
-    path: 'contactus',
+    path: 'contact-us',
     loadChildren: () =>
       import('./contactus/contactus.module').then((m) => m.ContactusModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
