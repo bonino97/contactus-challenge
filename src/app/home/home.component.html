@@ -34,7 +34,7 @@
           class="flex flex-column items-center justify-center text-center mx-auto"
         >
           <p-table
-            [value]="users"
+            [value]="(_userService.users$ | async) ?? []"
             styleClass="mt-2 w-100 "
             [tableStyle]="{ 'min-width': '50rem' }"
           >
@@ -52,7 +52,7 @@
                   <img [src]="user.image" class="profile-image" />
                   <div>
                     <div class="text-normal">{{ user.name }}</div>
-                    <div class="text-secondary">{{ user.username }}</div>
+                    <div class="text-secondary">@{{ user.username }}</div>
                   </div>
                 </td>
                 <td>{{ user.joinedDate | date }}</td>
