@@ -11,7 +11,7 @@
       <div class="flex flex-column lg:flex-row gap-2 mb-4">
         <div class="mb-4 lg:mb-0 w-full lg:w-1/2">
           <label for="firstName" class="block text-900 font-medium mb-2"
-            >First Name</label
+            >First Name *</label
           >
           <input
             id="firstName"
@@ -24,7 +24,7 @@
         </div>
         <div class="w-full lg:w-1/2">
           <label for="lastName" class="block text-900 font-medium mb-2"
-            >Last Name</label
+            >Last Name *</label
           >
           <input
             id="lastName"
@@ -95,7 +95,10 @@
             formControlName="terms"
           ></p-checkbox>
           <label for="terms" class="text-900"
-            >I agree to Terms of Service and Privacy Policy</label
+            >I agree to
+            <a href="#" class="text-primary"
+              >Terms of Service and Privacy Policy</a
+            ></label
           >
         </div>
       </div>

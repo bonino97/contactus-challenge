@@ -1,12 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { of, Subject } from 'rxjs';
-import { ContactusComponent } from './contactus.component';
-import { UserService } from '../shared/services/users.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { of } from 'rxjs';
+
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+
+import { UserService } from '../shared/services/users.service';
+
+import { ContactusComponent } from './contactus.component';
 
 describe('ContactusComponent', () => {
   let component: ContactusComponent;
@@ -25,6 +29,7 @@ describe('ContactusComponent', () => {
         CheckboxModule,
         ButtonModule,
         InputTextModule,
+        RouterTestingModule,
       ],
       providers: [
         FormBuilder,

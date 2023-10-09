@@ -1,10 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
-import { UserService } from '../shared/services/users.service';
-import { of } from 'rxjs';
+import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
+import { of } from 'rxjs';
+
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+
+import { UserService } from '../shared/services/users.service';
+import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -26,7 +29,7 @@ describe('HomeComponent', () => {
 
     await TestBed.configureTestingModule({
       declarations: [HomeComponent],
-      imports: [TableModule, ButtonModule],
+      imports: [TableModule, ButtonModule, RouterTestingModule],
       providers: [{ provide: UserService, useValue: userServiceMock }],
     }).compileComponents();
 

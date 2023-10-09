@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../shared/services/users.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { IUser } from '../shared/interfaces/IUser.interface';
 import { Router } from '@angular/router';
-import { Subject, takeUntil, tap } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+
+import { Subject, takeUntil } from 'rxjs';
+
+import { UserService } from '../shared/services/users.service';
+import { IUser } from '../shared/interfaces/IUser.interface';
 
 @Component({
   selector: 'app-contactus',
@@ -32,8 +34,8 @@ export class ContactusComponent implements OnInit {
 
   initForm() {
     this.userForm = this._formBuilder.group({
-      firstName: [''],
-      lastName: [''],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: [''],
       message: [''],
       terms: [false],
@@ -48,6 +50,8 @@ export class ContactusComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (!this.userForm.valid) return;
+
     const user = {
       name: `${this.userForm.get('firstName')?.value} ${
         this.userForm.get('lastName')?.value

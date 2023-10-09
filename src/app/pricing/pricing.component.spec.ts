@@ -1,7 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PricingComponent } from './pricing.component';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
+
+import { PricingComponent } from './pricing.component';
 
 describe('PricingComponent', () => {
   let component: PricingComponent;
@@ -11,7 +14,7 @@ describe('PricingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PricingComponent],
-      imports: [ButtonModule, BadgeModule],
+      imports: [ButtonModule, BadgeModule, RouterTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PricingComponent);
