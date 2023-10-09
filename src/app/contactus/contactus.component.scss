@@ -1,0 +1,30 @@
+/* Asegurándonos de que la altura de HTML y body es 100% */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Creando un contenedor que ocupa todo el espacio de la ventana y tiene una imagen en la parte superior */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 100% de la altura de la ventana del navegador */
+  width: 100vw; /* 100% del ancho de la ventana del navegador */
+  // background: linear-gradient(
+  //     to bottom,
+  //     rgba(255, 255, 255, 0.8),
+  //     rgba(255, 255, 255, 0.8)
+  //   ),
+  //   url("your-image-url.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+  .lg\:w-6 {
+    width: 50%;
+  }
+}

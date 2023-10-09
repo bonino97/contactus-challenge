@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ContactusComponent } from './contactus.component';
 import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 const routes = [
   {
@@ -19,6 +21,8 @@ const routes = [
     RouterModule.forChild(routes),
     FormsModule,
     CheckboxModule,
+    ButtonModule,
+    InputTextModule,
   ],
 })
 export class ContactusModule {}
