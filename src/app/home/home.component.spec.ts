@@ -50,10 +50,10 @@ describe('HomeComponent', () => {
 
   it('should render users table', () => {
     const rows = fixture.debugElement.queryAll(By.css('p-table tr'));
-    expect(rows.length).toBe(2); // One header row, one data row
+    expect(rows.length).toBe(2);
 
     const cells = rows[1].queryAll(By.css('td'));
-    expect(cells.length).toBe(4); // Four cells in the data row
+    expect(cells.length).toBe(4);
 
     expect(cells[0].nativeElement.textContent).toContain('John');
     expect(cells[0].nativeElement.textContent).toContain('@john_doe');
