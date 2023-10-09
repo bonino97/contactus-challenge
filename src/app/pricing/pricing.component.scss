@@ -7,6 +7,21 @@
 }
 
 .bg-pricing {
-  background-color: #3F4EC4;
-  background-image: linear-gradient(160deg, #3F4EC4 0%, #9BA6F9 100%);
+  background-color: #3f4ec4;
+  background-image: linear-gradient(160deg, #3f4ec4 0%, #9ba6f9 100%);
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green-100) !important;
+  color: var(--green-700) !important;
+}
+
+.popular-card {
+  height: 37rem !important;
 }

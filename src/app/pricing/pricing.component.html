@@ -1,16 +1,18 @@
 <div class="surface-ground px-4 py-8 md:px-6 lg:px-8 bg-pricing">
-  <div class="text-100 font-bold text-sm mb-4 text-center">PRICING PLANS</div>
-  <div class="font-bold text-5xl mb-4 text-center text-white">
+  <div class="text-100 text-sm mb-4 text-center">PRICING PLANS</div>
+  <div class="font-bold text-2xl lg:text-5xl mb-4 text-center text-white">
     Get the Best Option Now
   </div>
-  <div class="text-200 text-xl mb-6 text-center line-height-3">
+  <div
+    class="text-200 text-md sm:text-lg mb-6 text-center line-height-3 lg:w-6 m-auto"
+  >
     The informative, and brief subheading that builds the interest around the
     created product. The copy encourages user to discover it.
   </div>
 
   <div class="grid">
     <div class="col-12 lg:col-4">
-      <div class="p-3 h-full">
+      <div class="lg:p-3">
         <div
           class="shadow-2 p-3 h-full flex flex-column surface-card text-center"
           style="border-radius: 10px"
@@ -20,24 +22,32 @@
           </div>
           <div class="text-primary font-bold mt-3">Option Name</div>
           <span class="font-bold text-5xl text-900 mt-2">$9/month</span>
-          <hr class="my-3 mx-0 border-top-1 border-none surface-border" />
+          <div class="text-600 text-md mt-2 text-center line-height-3">
+            Good starting point
+          </div>
+          <hr class="my-4 mx-0 border-top-1 border-none surface-border" />
           <ul class="list-none p-0 m-0 flex-grow-1">
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Arcu vitae elementum</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">All standard elements included</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Dui faucibus in ornare</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Over 1800 Components</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Morbi tincidunt augue</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Best Figma techniques</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-minus mr-1 p-2"></i>
+              <span class="text-900">Up to 10 design editors</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-minus mr-1 p-2"></i>
+              <span class="text-900">Email support</span>
             </li>
           </ul>
-          <hr
-            class="mb-3 mx-0 border-top-1 border-none surface-border mt-auto"
-          />
           <button
             pButton
             pRipple
@@ -49,9 +59,9 @@
     </div>
 
     <div class="col-12 lg:col-4">
-      <div class="p-3 h-full">
+      <div class="lg:p-3">
         <div
-          class="shadow-2 p-3 h-full flex flex-column surface-card text-center"
+          class="shadow-2 p-3 h-full flex flex-column surface-card text-center popular-card"
           style="border-radius: 10px"
         >
           <div class="text-900 icon-bg m-auto flex flex-column">
@@ -62,30 +72,30 @@
           <div class="text-600 text-md mt-2 text-center line-height-3">
             Good starting point
           </div>
-          <p-badge
-            styleClass="mt-3"
-            [value]="'Most Popular'"
-          ></p-badge>
-          <hr class="my-3 mx-0 border-top-1 border-none surface-border" />
+          <p-badge styleClass="mt-3" [value]="'Most Popular'"></p-badge>
+          <hr class="my-4 mx-0 border-top-1 border-none surface-border" />
           <ul class="list-none p-0 m-0 flex-grow-1">
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Arcu vitae elementum</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">All standard elements included</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Dui faucibus in ornare</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Over 1800 Components</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Morbi tincidunt augue</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Best Figma techniques</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Duis ultricies lacus sed</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Up to 10 design editors</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Email support</span>
             </li>
           </ul>
-          <hr class="mb-3 mx-0 border-top-1 border-none surface-border" />
           <button
             pButton
             pRipple
@@ -97,9 +107,9 @@
     </div>
 
     <div class="col-12 lg:col-4">
-      <div class="p-3 h-full">
+      <div class="lg:p-3">
         <div
-          class="shadow-2 p-3 flex flex-column surface-card text-center"
+          class="shadow-2 p-3 h-full max-h-1000 flex flex-column surface-card text-center"
           style="border-radius: 10px"
         >
           <div class="text-900 icon-bg m-auto flex flex-column">
@@ -107,34 +117,32 @@
           </div>
           <div class="text-primary font-bold mt-3">Option Name</div>
           <span class="font-bold text-5xl text-900 mt-2">$29/month</span>
-          <hr class="my-3 mx-0 border-top-1 border-none surface-border" />
+          <div class="text-600 text-md mt-2 text-center line-height-3">
+            Good starting point
+          </div>
+          <hr class="my-4 mx-0 border-top-1 border-none surface-border" />
           <ul class="list-none p-0 m-0 flex-grow-1">
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Arcu vitae elementum</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">All standard elements included</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Dui faucibus in ornare</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Over 1800 Components</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Morbi tincidunt augue</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Best Figma techniques</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Duis ultricies lacus sed</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Up to 10 design editors</span>
             </li>
             <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Imperdiet proin</span>
-            </li>
-            <li class="flex align-items-center mb-3">
-              <i class="pi pi-check-circle text-green-500 mr-2"></i>
-              <span class="text-900">Nisi scelerisque</span>
+              <i class="pi pi-check icon mr-2"></i>
+              <span class="text-900">Email support</span>
             </li>
           </ul>
-          <hr class="mb-3 mx-0 border-top-1 border-none surface-border" />
           <button
             pButton
             pRipple

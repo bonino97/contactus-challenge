@@ -1,1 +1,72 @@
-<p>home works!</p>
+<div class="container h-screen w-screen items-center justify-center">
+  <div class="surface-ground px-4 py-8 md:px-6 lg:px-8 h-full">
+    <!-- Content Section -->
+    <div class="lg:p-3 lg:pb-0">
+      <div class="p-3 px-6 surface-card">
+        <!-- Header Section -->
+        <div class="text-900 text-lg font-bold lg:text-2xl mt-4">
+          Members & Roles
+        </div>
+        <div class="text-700 text-sm mt-2">
+          You can easily manage your team on this page
+        </div>
+        <hr class="mb-0 mt-4" style="border: 0.1px solid rgb(214, 214, 214)" />
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="lg:p-3 lg:pt-0 h-full" style="max-height: 40rem">
+      <div class="p-3 px-6 h-full surface-card flex flex-column lg:flex-row">
+        <!-- Members Section -->
+        <div class="flex flex-column items-center lg:mr-4">
+          <h2 class="text-black font-normal text-md w-full my-1">Members</h2>
+          <p class="text-600 text-sm w-full">
+            Manage your members in this project
+          </p>
+          <button pButton pRipple label="Invite a member" class="mt-2"></button>
+        </div>
+        <!-- Divider (only for small screens) -->
+        <hr
+          class="lg:hidden my-4 w-full border-top-1 border-none surface-border"
+        />
+        <!-- Roles Section -->
+        <div
+          class="flex flex-column items-center justify-center text-center mx-auto"
+        >
+          <p-table
+            [value]="users"
+            styleClass="mt-2 w-100 "
+            [tableStyle]="{ 'min-width': '50rem' }"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th class="font-normal">Name</th>
+                <th class="font-normal">Joined Date</th>
+                <th class="font-normal">Last Active</th>
+                <th></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-user>
+              <tr>
+                <td class="flex flex-row">
+                  <img [src]="user.image" class="profile-image" />
+                  <div>
+                    <div class="text-normal">{{ user.name }}</div>
+                    <div class="text-secondary">{{ user.username }}</div>
+                  </div>
+                </td>
+                <td>{{ user.joinedDate | date }}</td>
+                <td>{{ user.lastActive }}</td>
+                <td>
+                  <p-button styleClass="p-button-link text-700">
+                    <i class="pi pi-ellipsis-v icon"></i>
+                  </p-button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

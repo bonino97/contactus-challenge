@@ -1,0 +1,15 @@
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  /* Ajustar el punto de ruptura según sea necesario */
+  p-table {
+    overflow-x: auto;
+    display: block;
+  }
+}
