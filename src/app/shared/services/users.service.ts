@@ -42,15 +42,12 @@ export class UserService {
     return this.http.get<IResponse<IUser[]>>(this.apiUrl);
   }
 
-  createUser(user: IUser): Observable<IResponse<IUser>> {
-    return this.http.post<IResponse<IUser>>(this.apiUrl, user).pipe(
+  createUser(user: IUser): Observable<IUser> {
+    return of(user).pipe(
       tap((response) => {
         const users = this.usersSubject.getValue();
-        users.push(response.data);
+        users.push(response);
         this.usersSubject.next(users);
-      }),
-      catchError(() => {
-        return throwError(() => 'Error creating user!');
       })
     );
   }
